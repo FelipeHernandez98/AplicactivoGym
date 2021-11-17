@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/users/listUsers"><img style="width: 120px; height:70px;" src="/img/HulkLogo.png">HULK GYM SPORT</a>
+     {{#if user}}
+    <ul class="navbar-nav mr-auto">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      
+      <li class="nav-item active">
+        <a class="nav-link" href="/users/diasRestantes">Consultar dias</a>
+      </li>
+      <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Usuarios
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/users/addUser">Agregar usuario</a>
+              <a class="dropdown-item" href="/users/listUsers">Usuarios registrados</a>
+              <a class="dropdown-item" href="/users/usersActivos">Usuarios activos</a>
+              <div class="dropdown-divider"></div>
+            </div>
+          </li>
+      <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Ingresos
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/users/ingresosDiarios">Ingresos diarios</a>
+              <a class="dropdown-item" href="/users/ingresosSemanales">Ingresos semanales</a>
+          
+              <div class="dropdown-divider"></div>
+            </div>
+          </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout">Cerrar sesion</a>
+      </li>
+      
+      
+    </ul>
+    {{/if}}
+  </div>
+  </div>
+</nav>

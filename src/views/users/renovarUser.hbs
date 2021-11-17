@@ -1,0 +1,64 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card ">
+                <div class="card-body">
+                    <h2>Renovar membresia</h2>
+                    <br>
+                    <form action="/users/renovarUser/{{user.id}}" method="POST">
+                    <div class="form-group">
+                            <img style="width: 372px; heigth:200px; border-radius: 5px;" src="{{user.image_url}}">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <h5>Nombre:</h5>
+                            <input type="text" value="{{user.nombre}}" class="form-control" name="nombre" placeholder="Digite el nombre" autofocus>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <h5>Apellido:</h5>
+                            <input type="text" value="{{user.apellido}}" class="form-control" name="apellido" placeholder="Digite el apellido">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <h5>Cedula:</h5>
+                            <input type="number" value="{{user.cedula}}" class="form-control" name="cedula" placeholder="Digite la cedula" >
+                            
+                        </div>
+                        <div class="form-group">
+                            <h5>Celular:</h5>
+                            <input type="number" value="{{user.celular}}" class="form-control" name="celular" placeholder="Digite la cedula" >
+                            
+                        </div>
+
+                        <br>
+                        <h5>Fecha de renovación</h5>
+                        <div class="form-group">
+                            <input type="date" class="form-control" name="fecha_registro" placeholder="">
+                        </div>
+                        <br>
+                        <h5>Seleccione membresia</h5>
+                        <div class="form-group">
+                            <select class="form-select" name="membresia" required>
+                                <option value="Dia">Día</option>
+                                <option value="Semana">Semana</option>
+                                <option value="15dias">15 días</option>
+                                <option value="Mes">Mes</option>
+                            </select>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <input type="number" class="form-control"  name="cantidad" placeholder="Valor del pago" >
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <button class="btn btn-block btn-dark">
+                                Guardar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

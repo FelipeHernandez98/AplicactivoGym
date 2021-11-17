@@ -1,0 +1,46 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card ">
+                <div class="card-body">
+                    <h1>Actualizar datos</h1>
+                    <form action="/users/editUsers/{{users.id}}" method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <img style="width: 372px; heigth:200px; border-radius: 5px;" src="{{users.image_url}}">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <a href="/users/editFoto/{{users.id}}" class="btn btn-primary">Actualizar foto</a>
+                        </div>
+                        <div class="form-group">
+                            <h5>Nombre:</h5>
+                            <input type="text" value="{{users.nombre}}" class="form-control" name="nombre" placeholder="Digite el nombre" autofocus>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <h5>Apellido:</h5>
+                            <input type="text" value="{{users.apellido}}" class="form-control" name="apellido" placeholder="Digite el apellido">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <h5>Cedula:</h5>
+                            <input type="number" value="{{users.cedula}}" class="form-control" name="cedula" placeholder="Digite la cedula" >
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <h5>Celular:</h5>
+                            <input type="text" value="{{users.celular}}" class="form-control" name="celular" placeholder="Digite la cedula">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <button class="btn btn-block btn-dark">
+                                Actualizar
+                            </button>
+                            <a href="/users/listUsers" class="btn btn-danger">Cancelar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
