@@ -185,20 +185,20 @@ router.post('/diasRestantes', async(req, res)=>{
     const {cedula} = req.body;
     
     const users = await pool.query('SELECT * FROM users WHERE cedula = ?', cedula);
-
+    console.log(users);
+    req.flash('success', 'Cedula incorrecta');
+    if(users ==0){
+    console.log('Entre');
+    
+    res.render('users/diasRestantes');
+    }
+    else{
     var fechaInicio = moment(users[0].fecha_fin);
     var fechaActual = moment();
-    
-
-    console.log(fechaActual);
-    console.log(fechaInicio);
-
     const dias = fechaInicio.diff(fechaActual, 'd') +1;
-
-    console.log(dias);
-    
     res.render('users/dias', {users: users[0] , dias});
-
+    }
+    
 });
 
 router.get('/ingresosDiarios', isLoggedIn, async(req, res)=>{
